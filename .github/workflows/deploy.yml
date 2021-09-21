@@ -22,5 +22,5 @@ jobs:
           branch: master
           folder: dist
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: AutumnWhj/autumn.github.io # 这是我的 github page 仓库
+          repository-name: AutumnWhj/autumn.github.io # github page 仓库
           target-folder: github-actions-docs
