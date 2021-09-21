@@ -1,26 +1,26 @@
-name: Vue project Build and Deploy
-on:
-  push:
-    branches:
-      - master # 当master分支有变更，则执行以下jobs操作
-jobs:
-  deploying vue project:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1  
-        with:
-          persist-credentials: false
-      - name: building
-        # 执行shell命令
-        run: |
-          npm install
-          npm run build
-      - name: deploying
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
-          FOLDER: dist
-          REPOSITORY_NAME: AutumnWhj/autumn.github.io # 这是我的 github page 仓库
-          TARGET_FOLDER: github-actions
+# name: Vue project Build and Deploy
+# on:
+#   push:
+#     branches:
+#       - master # 当master分支有变更，则执行以下jobs操作
+# jobs:
+#   deploying vue project:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2.3.1  
+#         with:
+#           persist-credentials: false
+#       - name: building
+#         # 执行shell命令
+#         run: |
+#           npm install
+#           npm run build
+#       - name: deploying
+#         uses: JamesIves/github-pages-deploy-action@3.7.1
+#         with:
+#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#           BRANCH: master
+#           FOLDER: dist
+#           REPOSITORY_NAME: AutumnWhj/autumn.github.io # 这是我的 github page 仓库
+#           TARGET_FOLDER: github-actions
