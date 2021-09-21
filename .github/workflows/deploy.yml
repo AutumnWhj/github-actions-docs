@@ -22,5 +22,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
           FOLDER: dist
-          REPOSITORY_NAME: AutumnWhj/autumn.github.io # 这是我的 github page 仓库
+          REPOSITORY_NAME: AutumnWhj/antumn.github.io # 这是我的 github page 仓库
           TARGET_FOLDER: docs
